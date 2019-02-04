@@ -14,7 +14,7 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     assert_select 'div.alert'
     assert_select 'div.alert-danger'
   end
-
+#リスト 7.33: 有効なユーザー登録に対するテスト
   test "valid signup information" do
     get signup_path
     assert_difference 'User.count', 1 do
