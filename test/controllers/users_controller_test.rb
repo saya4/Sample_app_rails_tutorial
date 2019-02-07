@@ -1,9 +1,4 @@
-require 'test_helper'
-
-class UsersControllerTest < ActionDispatch::IntegrationTest
-  test "should get new" do
-    get signup_path
-    assert_response :success
-  end
-
+def correct_user
+  @user = User.find(params[:id])
+  redirect_to(root_url) unless @user == current_user
 end
